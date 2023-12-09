@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+// 定位
+.abs {
+  position: absolute !important;
+}
+
+.rel {
+  position: relative !important;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.full {
+  width: 100% !important;
+}
+.h-full {
+  height: 100% !important;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+// flex 布局
+.flex {
+  display: flex;
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.reverse {
+    flex-direction: row-reverse;
+    &.column {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &.inline {
+    display: inline-flex;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &.start {
+    justify-content: flex-start;
+  }
+  &.end {
+    justify-content: flex-end;
+  }
+  &.between {
+    justify-content: space-between;
+  }
+  &.center {
+    justify-content: center;
+  }
+
+  &.middle {
+    align-items: center;
+  }
+
+  & > .full {
+    flex-grow: 1;
+    min-width: auto !important;
+    width: auto !important;
+  }
+
+  &.grid > div {
+    flex: 1;
+  }
+
+  label {
+    flex-shrink: 0;
+  }
+}
+
+// 循环
+//$padding-list: (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,35,40,45,50);
+$pxrem: 1/16;
+@for $item from 0 through 50 {
+  .m#{$item} {
+    margin: #{$item * $pxrem}rem !important;
+  }
+
+  .mv#{$item} {
+    margin-top: #{$item * $pxrem}rem !important;
+    margin-bottom: #{$item * $pxrem}rem !important;
+  }
+
+  .mh#{$item} {
+    margin-left: #{$item * $pxrem}rem !important;
+    margin-right: #{$item * $pxrem}rem !important;
+  }
+
+  .ml#{$item} {
+    margin-left: #{$item * $pxrem}rem !important;
+  }
+
+  .mt#{$item} {
+    margin-top: #{$item * $pxrem}rem !important;
+  }
+
+  .mr#{$item} {
+    margin-right: #{$item * $pxrem}rem !important;
+  }
+
+  .mb#{$item} {
+    margin-bottom: #{$item * $pxrem}rem !important;
+  }
+
+  .p#{$item} {
+    padding: #{$item * $pxrem}rem !important;
+  }
+
+  .pv#{$item} {
+    padding-top: #{$item * $pxrem}rem !important;
+    padding-bottom: #{$item * $pxrem}rem !important;
+  }
+
+  .ph#{$item} {
+    padding-left: #{$item * $pxrem}rem !important;
+    padding-right: #{$item * $pxrem}rem !important;
+  }
+
+  .pl#{$item} {
+    padding-left: #{$item * $pxrem}rem !important;
+  }
+
+  .pt#{$item} {
+    padding-top: #{$item * $pxrem}rem !important;
+  }
+
+  .pr#{$item} {
+    padding-right: #{$item * $pxrem}rem !important;
+  }
+
+  .pb#{$item} {
+    padding-bottom: #{$item * $pxrem}rem !important;
+  }
+}
